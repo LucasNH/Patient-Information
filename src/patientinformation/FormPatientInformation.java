@@ -581,7 +581,6 @@ public class FormPatientInformation extends javax.swing.JFrame {
         streetInput.setText(null);
         postalCodeInput.setText(null);
     }//GEN-LAST:event_cancelButtonActionPerformed
-    //http://www.softsensedata.com/man2/patientedit.html
     /**
      * @param args the command line arguments
      */
