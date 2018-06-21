@@ -14,6 +14,15 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 public class FormPatientInformation extends javax.swing.JFrame {
+    /**
+     * In the public method, it runs the GUI components, 
+     * it also finds the size of the screen that it's running on 
+     * and opens the program in the middle of the screen, 
+     * it then disables the okay button, 
+     * and finally adds all of the elements to the choices in the GUI.
+     * 
+     * public 
+     */
     public FormPatientInformation() {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
@@ -484,6 +493,12 @@ public class FormPatientInformation extends javax.swing.JFrame {
         okayButton.setEnabled(true);
     }//GEN-LAST:event_newFileActionPerformed
 
+    /**
+     * This method takes the inputted information from the GUI 
+     * and saves it to an external file. Currently, the file is a text file,
+     * this was to view and make sure the data was being stored properly.
+     * @param evt okay button
+     */
     private void okayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okayButtonActionPerformed
         okayButton.setEnabled(false);
         File dataFile = new File(lastNameInput.getText()+"."+firstNameInput.getText()+".txt");
@@ -556,6 +571,13 @@ public class FormPatientInformation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_okayButtonActionPerformed
     
+    /**
+     * The cancel button disables the okay button as the inputting and saving
+     * of information has been canceled. It also removes any information 
+     * that was inputted previously but does not delete any previously saved
+     * information
+     * @param evt cancel button
+     */
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         okayButton.setEnabled(false);
         patientNumberInput.setText(null);
